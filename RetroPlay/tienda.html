@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="tienda.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <title>Tienda RetroPlay</title>
+</head>
+<body>
+    <header id="header" class="fixed-top">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo.png" alt="Logo" height="70">
+                    </a>
+                </div>
+                <nav>
+                    <button class="nav-button" onclick="window.location.href='tienda.html'">Tienda</button>
+                    <button class="nav-button" onclick="window.location.href='historia.html'">Nuestra historia</button>
+                    <button class="nav-button" onclick="window.location.href='blog.html'">Blog RetroPlay</button>
+                </nav>
+                <div class="icons">
+                    <a href="#carrito" title="Carrito de compra">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23ffed29' d='M6 2h12v2H6zM4 6V4h2v2zm0 12V6H2v12zm2 2v-2H4v2zm12 0v2H6v-2zm2-2v2h-2v-2zm0-12h2v12h-2zm0 0V4h-2v2zm-9-1h2v2h3v2h-6v2h6v6h-3v2h-2v-2H8v-2h6v-2H8V7h3z'/%3E%3C/svg%3E" alt="Carrito" height="40">
+                    </a>
+                    <a href="#usuario" title="Usuario">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%231eff05' d='M13 2v1h-1v6h-1v1H9v1H8v1H7v1H5v-1H4v-1H3V9H2v6h1v1h1v1h1v1h1v4h2v-1H7v-1h1v-1h1v-1h1v1h1v3h2v-1h-1v-4h1v-1h1v-1h1v-3h1v1h1v-2h-2V9h5V8h-3V7h5V3h-1V2m-7 1h1v1h-1Z'/%3E%3C/svg%3E" alt="Usuario" height="40">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="banner">
+        <!-- Puedes agregar contenido del banner aquí -->
+    </div>
+
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Cuerpo -->
+    <div class="container" style="margin-top: 120px;">
+        <div class="row">
+            <!-- Filtros -->
+            <aside class="col-md-3">
+                <h3>Filtros</h3>
+                
+                <!-- Filtro géneros -->
+                <h5>Género</h5>
+                <ul>
+                    <li><input type="checkbox" id="accion"> Acción</li>
+                    <li><input type="checkbox" id="arcade"> Arcade</li>
+                    <li><input type="checkbox" id="aventura"> Aventura</li>
+                    <li><input type="checkbox" id="deporte"> Deportes</li>
+                    <li><input type="checkbox" id="estrategia"> Estrategia</li>
+                    <li><input type="checkbox" id="rompecabezas"> Rompecabezas</li>
+                    <li><input type="checkbox" id="rol"> Rol</li>
+                    <li><input type="checkbox" id="simulacion"> Simulación</li>
+                    <li><input type="checkbox" id="rpg"> RPG</li>
+                </ul>
+                
+                <!-- Filtro rango de precio -->
+                <h5>Rango de Precio</h5>
+                <input type="range" id="precio" name="precio" min="0" max="300" value="250">
+                <p>€0 - <span id="precio-valor">250</span>€</p>
+                
+                <!-- Filtro fecha de lanzamiento -->
+                <h5>Fecha de Lanzamiento</h5>
+                <ul>
+                    <li><input type="checkbox" id="70s"> 70's</li>
+                    <li><input type="checkbox" id="80s"> 80's</li>
+                    <li><input type="checkbox" id="90s"> 90's</li>
+                    <li><input type="checkbox" id="00s"> 00's</li>
+                    <li><input type="checkbox" id="10s"> 10's</li>
+                </ul>
+                
+                <!-- Filtro popularidad -->
+                <h5>Popularidad</h5>
+                <div class="rating">
+                    <form action="">
+                        <p class="calificacion">
+                            <div class="star-rating">
+                                <a href="#" class="star" data-value="1">★</a>
+                                <a href="#" class="star" data-value="2">★</a>
+                                <a href="#" class="star" data-value="3">★</a>
+                                <a href="#" class="star" data-value="4">★</a>
+                                <a href="#" class="star" data-value="5">★</a>
+                            </div>
+                        </p>
+                    </form>
+                </div>
+            </aside>
+
+            <!-- Zona principal -->
+            <main class="col-md-9">
+                <!-- Opciones visualización -->
+                <div class="view-options d-flex justify-content-start mb-4">
+                    <div class="view-option">
+                        <img src="https://images.unsplash.com/photo-1631896928992-90e5a2cc7a4e?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Consolas" class="rounded-circle" width="60">
+                    </div>
+                    <div class="view-option" title="Videojuegos">
+                        <img src="https://images.unsplash.com/photo-1555864400-cc47dd93d427?q=80&w=2431&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Videojuegos" class="rounded-circle" width="60">
+                    </div>
+                    <div class="view-option" title="Coleccionables">
+                        <img src="https://images.unsplash.com/photo-1543622748-5ee7237e8565?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Coleccionables" class="rounded-circle" width="60">
+                    </div>
+                    <div class="view-option" title="Emuladores">
+                        <img src="https://images.unsplash.com/photo-1572537577590-ac6a88150100?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Emuladores" class="rounded-circle" width="60">
+                    </div>
+                    <div class="view-option" title="TV Retro">
+                        <img src="https://images.unsplash.com/photo-1623910270913-3e0294a1c765?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="TV Retro" class="rounded-circle" width="60">
+                    </div>
+                    <div class="view-option" title="Manuales">
+                        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2023/12/manuales-videojuegos-3253036.jpg?tf=2048x" alt="Manuales" class="rounded-circle" width="60">
+                    </div>
+                </div>
+
+                <!-- Productos -->
+                <div class="row" id="productos-container">
+                    <!-- Productos con clase 'producto' y atributo 'data-precio' -->
+                    <div class="col-md-3 mb-4 producto" data-precio="50">
+                        <div class="card text-center">
+                            <img src="https://images.unsplash.com/photo-1640968418417-8bb0f5467417?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top rounded-circle" alt="Consola Pacman">
+                            <div class="card-body">
+                                <h5 class="card-title">Consola Pacman</h5>
+                                <p class="card-text">49.99€</p>
+                                <button class="add-to-cart btn btn-primary">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 producto" data-precio="66">
+                        <div class="card text-center">
+                            <img src="https://images.unsplash.com/photo-1597840900578-2c0798e868c3?q=80&w=2650&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top rounded-circle" alt="Sega Game Gear">
+                            <div class="card-body">
+                                <h5 class="card-title">Sega Game Gear</h5>
+                                <p class="card-text">65,50€</p>
+                                <button class="add-to-cart btn btn-primary">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 producto" data-precio="130">
+                        <div class="card text-center">
+                            <img src="https://images.unsplash.com/photo-1627421367074-0735f6ddc254?q=80&w=2672&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top rounded-circle" alt="Sega 16-bit Mega Drive">
+                            <div class="card-body">
+                                <h5 class="card-title">Sega 16-bit Mega Drive</h5>
+                                <p class="card-text">129,99€</p>
+                                <button class="add-to-cart btn btn-primary">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 producto" data-precio="126">
+                        <div class="card text-center">
+                            <img src="https://images.unsplash.com/photo-1516111143745-fbfc2ebd6352?q=80&w=2650&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top rounded-circle" alt="Nintendo Family Computer">
+                            <div class="card-body">
+                                <h5 class="card-title">Family Computer</h5>
+                                <p class="card-text">125,70€</p>
+                                <button class="add-to-cart btn btn-primary">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 producto" data-precio="36">
+                        <div class="card text-center">
+                            <img src="https://images.unsplash.com/photo-1620451912458-b8233cf0a237?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top rounded-circle" alt="Pack Pokemon GameBoy">
+                            <div class="card-body">
+                                <h5 class="card-title">Pack Pokemon GameBoy</h5>
+                                <p class="card-text">35,50€</p>
+                                <button class="add-to-cart btn btn-primary">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 producto" data-precio="45">
+                        <div class="card text-center">
+                            <img src="https://images.unsplash.com/photo-1659641002873-50460c5836e2?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top rounded-circle" alt="Zelda GameBoy">
+                            <div class="card-body">
+                                <h5 class="card-title">Zelda OOS GameBoy</h5>
+                                <p class="card-text">45,00€</p>
+                                <button class="add-to-cart btn btn-primary">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 producto" data-precio="18">
+                        <div class="card text-center">
+                            <img src="https://images.unsplash.com/photo-1619253790960-83acb6df8cc3?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top rounded-circle" alt="Sonic Mega Drive">
+                            <div class="card-body">
+                                <h5 class="card-title">Sonic Mega Drive</h5>
+                                <p class="card-text">17,45€</p>
+                                <button class="add-to-cart btn btn-primary">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 producto" data-precio="90">
+                        <div class="card text-center">
+                            <img src="https://images.unsplash.com/photo-1720855101081-2f0933765993?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top rounded-circle" alt="Pack Sega Mega Drive">
+                            <div class="card-body">
+                                <h5 class="card-title">Pack Sega Mega Drive</h5>
+                                <p class="card-text">89,99€</p>
+                                <button class="add-to-cart btn btn-primary">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 producto" data-precio="25">
+                        <div class="card text-center">
+                            <img src="https://images.unsplash.com/photo-1647893977173-59619da505d9?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top rounded-circle" alt="Pack Cartas Pokemon">
+                            <div class="card-body">
+                                <h5 class="card-title">Pack Cartas Pokemon</h5>
+                                <p class="card-text">25,00€</p>
+                                <button class="add-to-cart btn btn-primary">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 producto" data-precio="29">
+                        <div class="card text-center">
+                            <img src="https://images.unsplash.com/photo-1636391671189-b74857c38626?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top rounded-circle" alt="Pack Cartas Dragon Ball">
+                            <div class="card-body">
+                                <h5 class="card-title">Pack Cartas Dragon Ball</h5>
+                                <p class="card-text">29.00€</p>
+                                <button class="add-to-cart btn btn-primary">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 producto" data-precio="7">
+                        <div class="card text-center">
+                            <img src="https://images.unsplash.com/photo-1566577134770-3d85bb3a9cc4?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top rounded-circle" alt="Pack Figuras Tekken">
+                            <div class="card-body">
+                                <h5 class="card-title">3 Figuras Tekken</h5>
+                                <p class="card-text">7,50€</p>
+                                <button class="add-to-cart btn btn-primary">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 producto" data-precio="20">
+                        <div class="card text-center">
+                            <img src="https://images.unsplash.com/photo-1566577134665-2c674085abf7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top rounded-circle" alt="Pack 10 Figuras Random">
+                            <div class="card-body">
+                                <h5 class="card-title">10 Figuras Random</h5>
+                                <p class="card-text">19.99€</p>
+                                <button class="add-to-cart btn btn-primary">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="separadorFooter">
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul>
+                        <li><a href="tienda.html">Tienda</a></li>
+                        <li><a href="historia.html">Nuestra Historia</a></li>
+                        <li><a href="blog.html">Blog RetroPlay</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h5>Redes Sociales</h5>
+                    <ul>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#instagram">Instagram</a></li>
+                        <li><a href="#facebook">Facebook</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h5>Contacto</h5>
+                    <p>Email: contacto@retroplay.com</p>
+                    <p>Teléfono: +34 123 456 789</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

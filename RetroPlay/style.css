@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'Open Sans', 'Monserrat', sans-serif;
+    background-color: #01053d; opacity: 1; background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #01053d 7px ), repeating-linear-gradient( #1be7ff55, #1be7ff );
+}
+
+header {
+    height: 90px;
+    z-index: 1000;
+    background: #01053d;
+    opacity: 80%;
+    color: #fff;
+}
+
+.pt-3, .py-3 {
+    padding-top: 0.7rem !important;
+}
+
+/* Banner con el texto de "Visita nuestra colección" */
+#banner {
+    background-image: url('https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?q=80&w=2748&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    opacity: 75%;
+    height: 200px;
+    position: relative;
+    margin-top: 90px;
+    clear: both;
+    z-index: 999;
+}
+
+.banner-content h1 {
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    padding: 60px;
+    cursor: pointer;
+    transition: 1s;
+    text-shadow: 0 0 5px #1be7ff,
+    0 0 25px #1be7ff,
+    0 0 50px #1be7ff,
+    0 0 100px #1be7ff;
+}
+
+/* Quitar el color azul y subrayado por defecto de los enlaces */
+#banner .banner-content a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#banner .banner-content a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav a {
+    color: #fff;
+    margin: 0;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color:#ff4365;
+    text-decoration: underline;
+}
+
+/* Estilo para los botones en el header */
+.nav-button {
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    color: #ff4365;
+    border: 2px solid #ff4365;
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: background-color 0.3s;
+}
+
+/* Efecto hover para el botón */
+.nav-button:hover {
+    background-color: transparent;
+    color: #55ffe2;
+    border: 2px solid #55ffe2;
+}
+
+
+/* Estilo para el background */
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #07022c;
+    overflow: hidden;
+}
+
+.background span {
+    width: 50vmin;
+    height: 50vmin;
+    border-radius: 50vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 6;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.background span:nth-child(0) {
+    color: #ff4365;
+    top: 69%;
+    left: 25%;
+    animation-duration: 345s;
+    animation-delay: -409s;
+    transform-origin: -12vw -2vh;
+    box-shadow: 100vmin 0 12.853862057680312vmin currentColor;
+}
+.background span:nth-child(1) {
+    color: #36fa00;
+    top: 7%;
+    left: 52%;
+    animation-duration: 116s;
+    animation-delay: -76s;
+    transform-origin: -2vw -20vh;
+    box-shadow: 100vmin 0 12.699565569284344vmin currentColor;
+}
+.background span:nth-child(2) {
+    color: #36fa00;
+    top: 88%;
+    left: 12%;
+    animation-duration: 70s;
+    animation-delay: -148s;
+    transform-origin: -7vw -18vh;
+    box-shadow: -100vmin 0 12.622663306866993vmin currentColor;
+}
+.background span:nth-child(3) {
+    color: #36fa00;
+    top: 27%;
+    left: 27%;
+    animation-duration: 12s;
+    animation-delay: -323s;
+    transform-origin: 13vw 3vh;
+    box-shadow: -100vmin 0 13.419164165083757vmin currentColor;
+}
+.background span:nth-child(4) {
+    color: #ff4365;
+    top: 23%;
+    left: 60%;
+    animation-duration: 152s;
+    animation-delay: -257s;
+    transform-origin: 17vw 11vh;
+    box-shadow: 100vmin 0 13.041533580364737vmin currentColor;
+}
+.background span:nth-child(5) {
+    color: #36fa00;
+    top: 35%;
+    left: 97%;
+    animation-duration: 91s;
+    animation-delay: -211s;
+    transform-origin: 11vw -9vh;
+    box-shadow: 100vmin 0 13.09617489351757vmin currentColor;
+}
+.background span:nth-child(6) {
+    color: #36fa00;
+    top: 8%;
+    left: 37%;
+    animation-duration: 373s;
+    animation-delay: -68s;
+    transform-origin: -16vw -23vh;
+    box-shadow: 100vmin 0 12.8303049183823vmin currentColor;
+}
+.background span:nth-child(7) {
+    color: #ff5e00;
+    top: 46%;
+    left: 85%;
+    animation-duration: 416s;
+    animation-delay: -212s;
+    transform-origin: -23vw 24vh;
+    box-shadow: 100vmin 0 12.933313919427835vmin currentColor;
+}
+.background span:nth-child(8) {
+    color: #ff5e00;
+    top: 73%;
+    left: 88%;
+    animation-duration: 196s;
+    animation-delay: -98s;
+    transform-origin: 19vw -2vh;
+    box-shadow: -100vmin 0 13.261526278327583vmin currentColor;
+}
+
+
+.productos-destacados {
+    margin-top: 20px; /* Ajusta este valor a tu preferencia */
+}
+
+/* Ajustes para que las tarjetas de los productos tengan el mismo tamaño */
+.producto-item {
+    background-color: #e5e5f7;
+
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #45f5f755, #45f5f7 );
+    color: #ff5e00;
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.2s;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Hover para cambiar el fondo y añadir sombra */
+.producto-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(250, 250, 250, 0.2); /* Sombra al hacer hover */
+    background-color: #f9f9fd;
+    opacity: 90%;
+    background-image: 
+        repeating-radial-gradient(circle at 0 0, transparent 0, #f9f9fd 10px), 
+        repeating-linear-gradient(#fbddb455, #f7a184);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.producto-item img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Estilo botón de añadir al carrito */
+.card__cta {
+    display: block;
+    background-color: transparent;
+    color: #07022c;
+    border: 2px solid #07022c;
+    padding: 10px;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hover en el botón */
+.card__cta:hover {
+    background-color: #07022c;
+    color: #fafafc;
+    text-decoration: none;
+}
+
+
+/* Separación entre hcuerpo y footer */
+#separadorFooter{
+    height: 80px;
+  }
+
+/* Pie de página */
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #01053d;
+    opacity: 90%;
+    color: #1eff05;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer h5 {
+    margin: 15px;
+}
+
+.footer p {
+    color: white
+}
+
+.footer ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.footer a{
+    color:#ff4365;
+}
+
+.footer a:hover {
+    color:#1be7ff;
+    text-decoration: none;
+}

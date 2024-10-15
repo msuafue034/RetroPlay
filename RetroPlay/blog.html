@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="blog.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <title>Tienda RetroPlay</title>
+</head>
+<body>
+    <header id="header" class="fixed-top">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo.png" alt="Logo" height="70">
+                    </a>
+                </div>
+                <nav>
+                    <button class="nav-button" onclick="window.location.href='tienda.html'">Tienda</button>
+                    <button class="nav-button" onclick="window.location.href='historia.html'">Nuestra historia</button>
+                    <button class="nav-button" onclick="window.location.href='blog.html'">Blog RetroPlay</button>
+                </nav>
+                <div class="icons">
+                    <a href="#carrito" title="Carrito de compra">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23ffed29' d='M6 2h12v2H6zM4 6V4h2v2zm0 12V6H2v12zm2 2v-2H4v2zm12 0v2H6v-2zm2-2v2h-2v-2zm0-12h2v12h-2zm0 0V4h-2v2zm-9-1h2v2h3v2h-6v2h6v6h-3v2h-2v-2H8v-2h6v-2H8V7h3z'/%3E%3C/svg%3E" alt="Carrito" height="40">
+                    </a>
+                    <a href="#usuario" title="Usuario">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%231eff05' d='M13 2v1h-1v6h-1v1H9v1H8v1H7v1H5v-1H4v-1H3V9H2v6h1v1h1v1h1v1h1v4h2v-1H7v-1h1v-1h1v-1h1v1h1v3h2v-1h-1v-4h1v-1h1v-1h1v-3h1v1h1v-2h-2V9h5V8h-3V7h5V3h-1V2m-7 1h1v1h-1Z'/%3E%3C/svg%3E" alt="Usuario" height="40">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="banner">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <h1>BLOG RETROPLAY</h1>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Noticias -->
+            <div class="col-md-8">
+                <div class="row">
+                    <!-- Noticia 1 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <img src="https://sologamer.cl/wp-content/uploads/2024/03/2024358482612_1.jpg" alt="Nintendo denuncia" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Nintendo y las denuncias a los emuladores</h5>
+                                <p class="card-text">Los últimos movimientos de Nintendo tras la persecución de Yuzu y Citra han vuelto a sacar a relucir la 
+                                    fina línea que separa esta práctica de algo para preservar los videojuegos de un acto con consecuencias penales. 
+                                    Sin embargo, y mientras la "Gran N" sigue en su cruzada contra los emuladores, ha aparecido en la ecuación Implicit Conversions, 
+                                    una compañía que trabaja de forma conjunta con Sony para llevar más juegos clásicos a PS5, todo de forma legal.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Noticia 2 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <img src="https://topesdegama.com/app/uploads-topesdegama.com/2023/12/consola.jpg" alt="R365" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Gran recibimiento de la consola R36S</h5>
+                                <p class="card-text">La consola retro portátil R36S es una excelente opción para amantes de los videojuegos clásicos que marcaron una época. 
+                                    Es compatible con una amplia variedad de plataformas como MAME, Game Boy, Game Boy Color, PlayStation, PSP, NEO-GEO, entre otras muchas.
+                                    Su precio es bastante atractivo, sobre todo sí aprovechas una de las múltiples promociones que puedes encontrar. 
+                                    Por todo esto se ha ganado un sitio en el mercado, es una opción más que acertada.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Filtros -->
+            <aside class="col-md-3">
+                <h3>Filtros de búsqueda</h3>
+                <br>
+                <ul>
+                    <li><input type="checkbox" id="recientes">  Más recientes</li>
+                    <li><input type="checkbox" id="arcade">  Más antiguas</li>
+                    <li><input type="checkbox" id="aventura">  Más relevantes</li>
+                    <li><input type="checkbox" id="deporte">  Mejor valoradas</li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+     </div>
+
+
+    <div id="separadorFooter">
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul>
+                        <li><a href="tienda.html">Tienda</a></li>
+                        <li><a href="historia.html">Nuestra Historia</a></li>
+                        <li><a href="blog.html">Blog RetroPlay</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h5>Redes Sociales</h5>
+                    <ul>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#instagram">Instagram</a></li>
+                        <li><a href="#facebook">Facebook</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h5>Contacto</h5>
+                    <p>Email: contacto@retroplay.com</p>
+                    <p>Teléfono: +34 123 456 789</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
